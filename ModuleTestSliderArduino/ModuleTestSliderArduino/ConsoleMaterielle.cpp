@@ -48,5 +48,9 @@ void ConsoleMaterielle::onDataReceived()
 				emit nextChannel();
 			}
 		}
+		else if (data.startsWith("CONFIRM")) // Bouton de confirmation
+		{
+			emit confirmButtonPressed();
+		}
 	}
 }

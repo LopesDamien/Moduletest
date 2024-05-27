@@ -19,6 +19,7 @@ signals:
 	void channelValueChanged(int);
 	void nextChannel();
 	void previousChannel();
+	void confirmButtonPressed(); // Nouveau signal pour le bouton de confirmation
 	
 };
 

@@ -21,5 +21,5 @@ private slots:
     void onChannelValueUpdate(int value);
     void previousChannel(); // Déclaration de la fonction joystickMovedLeft
     void nextChannel(); // Déclaration de la fonction joystickMovedRight
-    void onConfirmButtonPressed();
+    void onConfirmButtonPressed() // Confirmer apres modification
 };

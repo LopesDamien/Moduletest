@@ -8,8 +8,6 @@ ModuleTestSliderArduino::ModuleTestSliderArduino(QWidget *parent)
     QObject::connect(&console, &ConsoleMaterielle::previousChannel, this, &ModuleTestSliderArduino::previousChannel);
     QObject::connect(&console, &ConsoleMaterielle::nextChannel, this, &ModuleTestSliderArduino::nextChannel);
     QObject::connect(&console, &ConsoleMaterielle::confirmButtonPressed, this, &ModuleTestSliderArduino::onConfirmButtonPressed);
-
-    connect(ui.pushButton, &QPushButton::clicked, this, &ModuleTestSliderArduino::onConfirmButtonPressed);
 }
 
 ModuleTestSliderArduino::~ModuleTestSliderArduino()
@@ -29,6 +27,7 @@ void ModuleTestSliderArduino::nextChannel()
 {
     ui.joystickLabel->setText("right");
 }
+
 void ModuleTestSliderArduino::onConfirmButtonPressed()
 {
     ui.confboutonLabel->setText("Confirmer");

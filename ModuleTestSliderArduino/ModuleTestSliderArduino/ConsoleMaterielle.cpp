@@ -22,7 +22,7 @@ void ConsoleMaterielle::onDataReceived()
 	{
 		QByteArray data = port->readLine();
 
-		if (data.startsWith("V"))		// Valeur potentiomètre
+		if (data.startsWith("V"))		// Valeur potentiomÃ¨tre
 		{
 			QString str = QString::fromUtf8(data);
 			QStringRef substr(&str, 1, str.length() - 1);
@@ -39,11 +39,11 @@ void ConsoleMaterielle::onDataReceived()
 		else if (data.startsWith("J"))    // Mouvement du joystick
 		{
 			QString str = QString::fromUtf8(data);
-			if (str.contains("LEFT"))
+			if (str.contains("UP"))
 			{
 				emit previousChannel();
 			}
-			else if (str.contains("RIGHT"))
+			else if (str.contains("DOWN"))
 			{
 				emit nextChannel();
 			}
